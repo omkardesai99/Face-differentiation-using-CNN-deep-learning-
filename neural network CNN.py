@@ -1,23 +1,3 @@
-'''
-CNN : Image Processing
-RNN and LSTM : Stock Prices or Large no no Column or numerical data
-
-
-CNN : Kersa 
-relu
-max Pooling
-Flatten
-
-terms
-Dense
-Dropout
-
-kersa,tensorflow,theano :
-'''
-
-
-
-# import keras library 
 import cv2
 from keras.models import Sequential
 from keras.layers import Conv2D
@@ -39,8 +19,7 @@ classifier.add(MaxPooling2D(pool_size = (2, 2)))
 classifier.add(Flatten())
 #step-4:Full connection                                                                                                     
 classifier.add(Dense(units = 128,activation = "relu"))
-classifier.add(Dense(units = 1,activation = "sigmoid")) #if only two characteristics in images to differentiate then use "sigmoid" and if more than two characteristic in images than use softmax
-
+classifier.add(Dense(units = 1,activation = "sigmoid")) 
 #compiling 
 classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
@@ -77,8 +56,6 @@ else:
     prediction='cat'
     print(prediction)
 
-100:1model
-200:2model
 
 
 
